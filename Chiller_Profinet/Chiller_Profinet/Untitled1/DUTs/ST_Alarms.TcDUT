@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Alarms" Id="{396b5deb-5f07-4bcd-88cf-420e3de62459}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Alarms :
+STRUCT
+eStopInternal      AT %I* : BOOL;
+eStopExternal      AT %I* : BOOL;
+_230VAC            AT %I* : BOOL;
+_24VDC             AT %I* : BOOL;
+_24VDC_Puffer      AT %I* : BOOL;
+profinet           AT %I* : BOOL;
+communicationDCS   AT %I* : BOOL;
+sfSafteySPS        AT %I* : BOOL;
+F11                AT %I* : BOOL;
+F12                AT %I* : BOOL;
+F13                AT %I* : BOOL;
+F15                AT %I* : BOOL;
+F16                AT %I* : BOOL;
+F10011             AT %I* : BOOL;
+F10511             AT %I* : BOOL;
+F10611             AT %I* : BOOL;
+F10811             AT %I* : BOOL;
+F15611             AT %I* : BOOL;
+F18011             AT %I* : BOOL;
+F18111             AT %I* : BOOL;
+F18211             AT %I* : BOOL;
+F18311             AT %I* : BOOL;
+F50011             AT %I* : BOOL;
+F50511             AT %I* : BOOL;
+F51011             AT %I* : BOOL;
+F51511             AT %I* : BOOL;
+F55611             AT %I* : BOOL;
+F56511             AT %I* : BOOL;
+F60011             AT %I* : BOOL;
+F60511             AT %I* : BOOL;
+F61011             AT %I* : BOOL;
+F61511             AT %I* : BOOL;
+F65611             AT %I* : BOOL;
+F66511             AT %I* : BOOL;
+B10011             AT %I* : BOOL;
+B10511             AT %I* : BOOL;
+B14011             AT %I* : BOOL;
+B16411             AT %I* : BOOL;
+B16811             AT %I* : BOOL;
+B18011             AT %I* : BOOL;
+B55111             AT %I* : BOOL;
+B55211             AT %I* : BOOL;
+B55811             AT %I* : BOOL;
+B56511             AT %I* : BOOL;
+B56811             AT %I* : BOOL;
+B57311             AT %I* : BOOL;
+B65111             AT %I* : BOOL;
+B65211             AT %I* : BOOL;
+B65511             AT %I* : BOOL;
+B65811             AT %I* : BOOL;
+B66511             AT %I* : BOOL;
+B66811             AT %I* : BOOL;
+B67311             AT %I* : BOOL;
+H50011             AT %I* : BOOL;
+H50511             AT %I* : BOOL;
+H60011             AT %I* : BOOL;
+H60511             AT %I* : BOOL;
+H61011             AT %I* : BOOL;
+N14011             AT %I* : BOOL;
+K12Y               AT %I* : BOOL;
+K12YY              AT %I* : BOOL;
+K13Y               AT %I* : BOOL;
+K13YY              AT %I* : BOOL;
+K15                AT %I* : BOOL;
+K16                AT %I* : BOOL;
+F16511             AT %I* : BOOL;
+VSDN14011          AT %I* : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

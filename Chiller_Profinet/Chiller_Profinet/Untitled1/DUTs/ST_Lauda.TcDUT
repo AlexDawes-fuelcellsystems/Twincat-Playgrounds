@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Lauda" Id="{6161c4da-d70f-4889-85b4-afa73b59614b}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Lauda :
+STRUCT
+	controlOut : ST_Control;
+	valueOut : ST_Value0;
+	statesIn : ST_States;
+	valueIn : ST_Value1;
+	alarmIn : ST_Alarms;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

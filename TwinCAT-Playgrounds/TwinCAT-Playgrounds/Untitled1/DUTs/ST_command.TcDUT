@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_command" Id="{e6b4cc46-adb5-4026-9710-b45e7bfb6b99}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_command :
+STRUCT
+	
+	CommandID  : UDINT; // Written by ROS: new value => new command
+    Command    : E_hyflowCommand;  // Command enum
+    payload : ARRAY [1..5] OF UDINT; 
+    AckID      : UDINT; // Written by PLC: mirrors CommandID on success
+    result : HRESULT;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

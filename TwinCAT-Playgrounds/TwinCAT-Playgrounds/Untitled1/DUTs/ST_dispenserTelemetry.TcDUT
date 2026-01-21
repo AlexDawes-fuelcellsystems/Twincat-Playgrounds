@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_dispenserTelemetry" Id="{334a93b1-ed12-4af4-9d1b-77b236462202}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_dispenserTelemetry :
+STRUCT
+   time_ : DATE_AND_TIME;
+   name     : STRING(80);
+   lastName : STRING(80);
+   roleName : STRING(80);
+   state : E_dispenserState;
+   amount : REAL;
+   price :REAL;
+   mass : REAL;
+   flowRate : REAL;
+   percentageFill : REAL ;
+   nozzle : ARRAY [1..3] OF ST_nozzleData;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

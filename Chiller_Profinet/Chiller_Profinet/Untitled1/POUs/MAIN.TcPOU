@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{59587553-af8f-4ce8-a007-5c93cf434cbe}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+
+ b : ARRAY[0..3] OF BYTE;
+ c : REAL;
+
+testByte AT %MB0 : BYTE;
+testBool : BOOL;  // bit 0 of the same byte
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Tests of Real and BOOL bit assignment to values
+b[0] := 16#00;
+b[1] := 16#00;
+b[2] := 16#80;
+b[3] := 16#3F;
+
+//Test of real value 
+MEMCPY(ADR(c), ADR(b), SIZEOF(c));
+
+//Test of bool values
+testByte := 16#02;
+testbool := testbyte.0;
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

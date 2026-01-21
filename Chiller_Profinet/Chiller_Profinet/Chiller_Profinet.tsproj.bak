@@ -1,0 +1,1292 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000002}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..1] OF BYTE</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000020}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..31] OF BYTE</Name>
+			<BitSize>256</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>32</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000004}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..3] OF BYTE</Name>
+			<BitSize>32</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000040}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..63] OF BYTE</Name>
+			<BitSize>512</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>64</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000010}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..15] OF BYTE</Name>
+			<BitSize>128</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>16</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{962F31B2-CB50-4310-AB72-F9F7552E9381}" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+				<Task Id="4" Priority="1" CycleTime="10000" AmsPort="301">
+					<Name>Task_Profinet</Name>
+					<Vars VarGrpType="1" InsertType="1">
+						<Name>Inputs</Name>
+					</Vars>
+					<Vars VarGrpType="2" InsertType="1">
+						<Name>Outputs</Name>
+					</Vars>
+					<Image Id="2" AddrType="1" ImageType="1">
+						<Name>Task_Profinet-Image</Name>
+					</Image>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{044AC65A-00FF-4C27-9ECF-CB1C9B5EEA37}" Name="Untitled1" PrjFilePath="Untitled1\Untitled1.plcproj" TmcFilePath="Untitled1\Untitled1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{5CC91D85-5F76-112D-D9B8-40A7420D0984}">
+					<Name>Untitled1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.controlOut.watchdog</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.controlOut.start_Stop</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.controlOut.reset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.controlOut.remote</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueOut.tempSetpointN10011</Name>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueOut.speedPumpN14011</Name>
+							<Type>REAL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.watchdog</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.operation</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.V50011On</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.v60011On</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.remote</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.filling</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.heating</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.cooling</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.ready</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.commonFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.commonWarning</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.statesIn.criticalError</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.actualSetpoint</Name>
+							<Comment><![CDATA[Actual Setpoint of chiller]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B10011</Name>
+							<Comment><![CDATA[Temperature Probe HTF Outflow]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B10511</Name>
+							<Comment><![CDATA[Temperature Probe HTF return (1)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B10512</Name>
+							<Comment><![CDATA[Temperature Probe HTF return (2)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B14011</Name>
+							<Comment><![CDATA[Temperature probe tank]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B16411</Name>
+							<Comment><![CDATA[Pressure sensor HTF outflow]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B18011</Name>
+							<Comment><![CDATA[Level Sensor Filling]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B55111</Name>
+							<Comment><![CDATA[Temperature probe outflow evaporator]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B55211</Name>
+							<Comment><![CDATA[Pressure sensor outflow evaporator]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B55811</Name>
+							<Comment><![CDATA[Pressure sensor discharge oil pump (1)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B56511</Name>
+							<Comment><![CDATA[Temperature probe gas line (1)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B56811</Name>
+							<Comment><![CDATA[Pressure sensor condensor inlet]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B57311</Name>
+							<Comment><![CDATA[Temperature probe inlet injection valve]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B65111</Name>
+							<Comment><![CDATA[Temperature probe outflow evaporator]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B65211</Name>
+							<Comment><![CDATA[Pressure sensor outflow evaporator]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B65511</Name>
+							<Comment><![CDATA[Temperature probe suction side compressor]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B65811</Name>
+							<Comment><![CDATA[Pressure sensor discharge oil pump (2)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B66511</Name>
+							<Comment><![CDATA[ Temperature probe gas line (2)]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B66811</Name>
+							<Comment><![CDATA[Pressure sensor condensor inlet ]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.B67311</Name>
+							<Comment><![CDATA[Temperature probe inlet injection valve]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.valueIn.N10011</Name>
+							<Comment><![CDATA[Actuating signal temperature controller TIC N10011]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.eStopInternal</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.eStopExternal</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn._230VAC</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn._24VDC</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn._24VDC_Puffer</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.profinet</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.communicationDCS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.sfSafteySPS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F11</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F12</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F13</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F15</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F16</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F10011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F10511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F10611</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F10811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F15611</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F18011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F18111</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F18211</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F18311</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F50011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F50511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F51011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F51511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F55611</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F56511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F60011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F60511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F61011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F61511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F65611</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F66511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B10011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B10511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B14011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B16411</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B16811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B18011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B55111</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B55211</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B55811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B56511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B56811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B57311</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B65111</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B65211</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B65511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B65811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B66511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B66811</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.B67311</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.H50011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.H50511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.H60011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.H60511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.H61011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.N14011</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K12Y</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K12YY</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K13Y</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K13YY</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K15</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.K16</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.F16511</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Lauda.laudaChiller.alarmIn.VSDN14011</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+		<Io>
+			<Device Id="1" DevType="118" AmsPort="28673" AmsNetId="192.168.1.166.2.1" RemoteName="Device 1 (EL6631-0010)">
+				<Name>Device 1 (EL6631-0010)</Name>
+				<AddressInfo>
+					<Ecat>
+						<EtherCATDeviceId>0</EtherCATDeviceId>
+					</Ecat>
+				</AddressInfo>
+				<Image Id="1" AddrType="4" ImageType="3" SizeIn="38" SizeOut="120">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="1" BoxType="9131">
+					<Name>abx-prt</Name>
+					<Comment><![CDATA[GSDML Name: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Path: C:\Repos\Twincat-Playgrounds\Chiller_Profinet\
+VendorName: HMS Industrial Networks
+OrderNumber: Anybus X-gateway
+HW Release Version: 2
+SW Release Version: V3.29]]></Comment>
+					<ImageId>121</ImageId>
+					<Vars VarGrpType="1">
+						<Name>Inputs</Name>
+						<Var>
+							<Name>PnIoBoxState</Name>
+							<Comment><![CDATA[0x0001 = Device is in I/O exchange
+0x0002 = Device is blinking
+0x0004 = Provider State -> 0 = Stop, 1 = Run
+0x0008 = Problem Indicator -> 0 = OK, 1 = Error
+]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>Outputs</Name>
+						<Var>
+							<Name>PnIoBoxCtrl</Name>
+							<Comment><![CDATA[0x00XX = Last two hex characters of station name
+]]></Comment>
+							<Type>WORD</Type>
+						</Var>
+					</Vars>
+					<Profinet DeviceId="17" VendorId="268" FrameOffset="49152" ProtocolType="4" BoxOnDeviceTyp="118" MaxPhysSlotNr="63" AvailableSlots="0..63" InstanceServerPort="50000" InstanceClientPort="50001" InstanceId="1" InstanceNumberOfARs="5" InstanceNumberOfAPIs="1" MinDeviceInterval="64" NrOfGsdmlDap="1" SavePnIoBoxValues="0100" BoxTypeInfo="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics." PDOmapping="1" GSDMLPath="C:\Repos\Twincat-Playgrounds\Chiller_Profinet\GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml" ImagePath="C:\Repos\Twincat-Playgrounds\Chiller_Profinet\GSDML-010C-0011-ABX-PRT.bmp" MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO" OrderNr="Anybus X-gateway" DefaultDNSName="ABX-PRT" VendorName="HMS Industrial Networks" FamDescription="Anybus X-gateway PROFINET IO module" GraphicFile="GSDML-010C-0011-ABX-PRT" SWVersion="V3.29" HWVersion="2" AltLanguage="7">
+						<UsedGsdmlModule ModuleIdentNumber="-1610612736" ModuleName="DAP Module" InfoText="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics." OrderNumber="Anybus X-gateway">
+							<Slot>0</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="96" Id="26" ModuleName="Output 032 bytes" InfoText="Output 032 bytes" ModuleCategory="Output modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="6" Id="6" ModuleName="Input 032 bytes" InfoText="Input 032 bytes" ModuleCategory="Input modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="2" Id="2" ModuleName="Input 002 bytes" InfoText="Input 002 bytes" ModuleCategory="Input modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="48" Id="23" ModuleName="Output 004 bytes" InfoText="Output 004 bytes" ModuleCategory="Output modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="112" Id="27" ModuleName="Output 064 bytes" InfoText="Output 064 bytes" ModuleCategory="Output modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlModule ModuleIdentNumber="80" Id="25" ModuleName="Output 016 bytes" InfoText="Output 016 bytes" ModuleCategory="Output modules">
+							<Slot>1</Slot>
+							<Slot>2</Slot>
+							<Slot>3</Slot>
+							<Slot>4</Slot>
+							<Slot>5</Slot>
+							<Slot>6</Slot>
+							<Slot>7</Slot>
+							<Slot>8</Slot>
+							<Slot>9</Slot>
+							<Slot>10</Slot>
+							<Slot>11</Slot>
+							<Slot>12</Slot>
+							<Slot>13</Slot>
+							<Slot>14</Slot>
+							<Slot>15</Slot>
+							<Slot>16</Slot>
+							<Slot>17</Slot>
+							<Slot>18</Slot>
+							<Slot>19</Slot>
+							<Slot>20</Slot>
+							<Slot>21</Slot>
+							<Slot>22</Slot>
+							<Slot>23</Slot>
+							<Slot>24</Slot>
+							<Slot>25</Slot>
+							<Slot>26</Slot>
+							<Slot>27</Slot>
+							<Slot>28</Slot>
+							<Slot>29</Slot>
+							<Slot>30</Slot>
+							<Slot>31</Slot>
+							<Slot>32</Slot>
+							<Slot>33</Slot>
+							<Slot>34</Slot>
+							<Slot>35</Slot>
+							<Slot>36</Slot>
+							<Slot>37</Slot>
+							<Slot>38</Slot>
+							<Slot>39</Slot>
+							<Slot>40</Slot>
+							<Slot>41</Slot>
+							<Slot>42</Slot>
+							<Slot>43</Slot>
+							<Slot>44</Slot>
+							<Slot>45</Slot>
+							<Slot>46</Slot>
+							<Slot>47</Slot>
+							<Slot>48</Slot>
+							<Slot>49</Slot>
+							<Slot>50</Slot>
+							<Slot>51</Slot>
+							<Slot>52</Slot>
+							<Slot>53</Slot>
+							<Slot>54</Slot>
+							<Slot>55</Slot>
+							<Slot>56</Slot>
+							<Slot>57</Slot>
+							<Slot>58</Slot>
+							<Slot>59</Slot>
+							<Slot>60</Slot>
+							<Slot>61</Slot>
+							<Slot>62</Slot>
+							<Slot>63</Slot>
+						</UsedGsdmlModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="ABS_V1" SubModuleName="RT Standard" InfoText="This Device Access Point supports RT communication"/>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="26" SubModuleName="Output 032 bytes" InfoText="Output 032 bytes" SubModuleCategory="Output modules">
+							<DataItemIn Name="Output" VarSize="256" VarType="{18071995-0000-0000-0000-000300000020}"/>
+						</UsedGsdmlSubModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="6" SubModuleName="Input 032 bytes" InfoText="Input 032 bytes" SubModuleCategory="Input modules">
+							<DataItemOut Name="Input" VarSize="256" VarType="{18071995-0000-0000-0000-000300000020}"/>
+						</UsedGsdmlSubModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="2" SubModuleName="Input 002 bytes" InfoText="Input 002 bytes" SubModuleCategory="Input modules">
+							<DataItemOut Name="Input" VarSize="16" VarType="{18071995-0000-0000-0000-000300000002}"/>
+						</UsedGsdmlSubModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="23" SubModuleName="Output 004 bytes" InfoText="Output 004 bytes" SubModuleCategory="Output modules">
+							<DataItemIn Name="Output" VarSize="32" VarType="{18071995-0000-0000-0000-000300000004}"/>
+						</UsedGsdmlSubModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="27" SubModuleName="Output 064 bytes" InfoText="Output 064 bytes" SubModuleCategory="Output modules">
+							<DataItemIn Name="Output" VarSize="512" VarType="{18071995-0000-0000-0000-000300000040}"/>
+						</UsedGsdmlSubModule>
+						<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="25" SubModuleName="Output 016 bytes" InfoText="Output 016 bytes" SubModuleCategory="Output modules">
+							<DataItemIn Name="Output" VarSize="128" VarType="{18071995-0000-0000-0000-000300000010}"/>
+						</UsedGsdmlSubModule>
+						<API Id="1">
+							<Name>API</Name>
+							<ImageId>4</ImageId>
+							<Module Id="#x031d0001" DAP="true" ModuleIdentNumber="-1610612736" ModuleInfo="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics.">
+								<Name>Term 1 (DAP Module)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics.
+OrderNumber: Anybus X-gateway]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0001" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="ABS_V1" AddSubModFlags="60">
+									<Name>Subterm 1 (RT Standard)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: This Device Access Point supports RT communication
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0002" ModuleIdentNumber="2" SlotNumber="1" ModuleInfo="Input 002 bytes" ModuleID="2" DirectDeletable="true">
+								<Name>Term 2 (Input 002 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Input 002 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0002" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="2">
+									<Name>Subterm 2 (Input 002 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Input 002 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+										<Var>
+											<Name>Input</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000002}">ARRAY [0..1] OF BYTE</Type>
+											<BitOffs>16</BitOffs>
+										</Var>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0003" ModuleIdentNumber="6" SlotNumber="2" ModuleInfo="Input 032 bytes" ModuleID="6" DirectDeletable="true">
+								<Name>Term 3 (Input 032 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Input 032 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0003" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="6">
+									<Name>Subterm 3 (Input 032 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Input 032 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+										<Var>
+											<Name>Input</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000020}">ARRAY [0..31] OF BYTE</Type>
+											<BitOffs>32</BitOffs>
+										</Var>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0004" ModuleIdentNumber="48" SlotNumber="3" ModuleInfo="Output 004 bytes" ModuleID="23" DirectDeletable="true">
+								<Name>Term 4 (Output 004 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Output 004 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0004" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="23">
+									<Name>Subterm 4 (Output 004 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Output 004 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+										<Var>
+											<Name>Output</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000004}">ARRAY [0..3] OF BYTE</Type>
+											<BitOffs>16</BitOffs>
+										</Var>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0005" ModuleIdentNumber="112" SlotNumber="4" ModuleInfo="Output 064 bytes" ModuleID="27" DirectDeletable="true">
+								<Name>Term 5 (Output 064 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Output 064 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0005" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="27">
+									<Name>Subterm 5 (Output 064 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Output 064 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+										<Var>
+											<Name>Output</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000040}">ARRAY [0..63] OF BYTE</Type>
+											<BitOffs>48</BitOffs>
+										</Var>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0006" ModuleIdentNumber="96" SlotNumber="5" ModuleInfo="Output 032 bytes" ModuleID="26" DirectDeletable="true">
+								<Name>Term 6 (Output 032 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Output 032 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0006" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="26">
+									<Name>Subterm 6 (Output 032 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Output 032 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+										<Var>
+											<Name>Output</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000020}">ARRAY [0..31] OF BYTE</Type>
+											<BitOffs>560</BitOffs>
+										</Var>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+									</Vars>
+								</SubModule>
+							</Module>
+							<Module Id="#x031d0007" ModuleIdentNumber="80" SlotNumber="6" ModuleInfo="Output 016 bytes" ModuleID="25" DirectDeletable="true">
+								<Name>Term 7 (Output 016 bytes)</Name>
+								<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Module Info: Output 016 bytes
+]]></Comment>
+								<ImageId>182</ImageId>
+								<SubModule Id="#x031c0007" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="25">
+									<Name>Subterm 7 (Output 016 bytes)</Name>
+									<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml.xml
+Submodule Info: Output 016 bytes
+]]></Comment>
+									<ImageId>183</ImageId>
+									<Vars VarGrpType="1">
+										<Name>Inputs</Name>
+										<Var>
+											<Name>Output</Name>
+											<Type GUID="{18071995-0000-0000-0000-000300000010}">ARRAY [0..15] OF BYTE</Type>
+											<BitOffs>816</BitOffs>
+										</Var>
+									</Vars>
+									<Vars VarGrpType="2">
+										<Name>Outputs</Name>
+									</Vars>
+								</SubModule>
+							</Module>
+						</API>
+					</Profinet>
+				</Box>
+				<Profinet PLCPortNr="851" AddPortCount="1">
+					<Ethernet TaskPort="301"/>
+				</Profinet>
+			</Device>
+		</Io>
+	</Project>
+	<Mappings>
+		<OwnerA Name="TIPC^Untitled1^Untitled1 Instance">
+			<OwnerB Name="TIID^Device 1 (EL6631-0010)^abx-prt">
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B10011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B10511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B14011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B16411" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B16811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B18011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B55111" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B55211" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B55811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B56511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B56811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B57311" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B65111" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B65211" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[5]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B65511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B65811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B66511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B66811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.B67311" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F10011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F10511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F10611" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F10811" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F11" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F12" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F13" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F15" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F15611" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F16" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[1]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F18011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F18111" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F18211" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F18311" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F50011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F50511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[2]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F51011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F51511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F55611" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F56511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F60011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F60511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F61011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F61511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[3]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F65611" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.F66511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[4]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.H50011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.H50511" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.H60011" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[6]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn._230VAC" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn._24VDC" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn._24VDC_Puffer" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.communicationDCS" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.eStopExternal" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.eStopInternal" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.profinet" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.alarmIn.sfSafteySPS" VarB="API^Term 7 (Output 016 bytes)^Subterm 7 (Output 016 bytes)^Inputs^Output[0]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.V50011On" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.commonFault" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[1]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.commonWarning" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[1]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.cooling" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="7"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.criticalError" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[1]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.filling" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.heating" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.operation" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.ready" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[1]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.remote" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.v60011On" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.statesIn.watchdog" VarB="API^Term 4 (Output 004 bytes)^Subterm 4 (Output 004 bytes)^Inputs^Output[0]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[4]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[5]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[6]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[7]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10511" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[8]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B10512" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[12]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B14011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[16]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B16411" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[20]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B18011" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[24]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B55111" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[28]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B55211" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[32]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B55811" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[36]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B56511" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[40]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B56811" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[44]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B57311" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[48]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B65111" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[52]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B65211" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[56]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B65511" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[60]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B65811" VarB="API^Term 6 (Output 032 bytes)^Subterm 6 (Output 032 bytes)^Inputs^Output[0]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B66511" VarB="API^Term 6 (Output 032 bytes)^Subterm 6 (Output 032 bytes)^Inputs^Output[4]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B66811" VarB="API^Term 6 (Output 032 bytes)^Subterm 6 (Output 032 bytes)^Inputs^Output[8]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.B67311" VarB="API^Term 6 (Output 032 bytes)^Subterm 6 (Output 032 bytes)^Inputs^Output[12]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.N10011" VarB="API^Term 6 (Output 032 bytes)^Subterm 6 (Output 032 bytes)^Inputs^Output[16]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.actualSetpoint" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[0]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.actualSetpoint" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[1]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.actualSetpoint" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[2]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.laudaChiller.valueIn.actualSetpoint" VarB="API^Term 5 (Output 064 bytes)^Subterm 5 (Output 064 bytes)^Inputs^Output[3]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.controlOut.remote" VarB="API^Term 2 (Input 002 bytes)^Subterm 2 (Input 002 bytes)^Outputs^Input[0]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.controlOut.reset" VarB="API^Term 2 (Input 002 bytes)^Subterm 2 (Input 002 bytes)^Outputs^Input[0]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.controlOut.start_Stop" VarB="API^Term 2 (Input 002 bytes)^Subterm 2 (Input 002 bytes)^Outputs^Input[0]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.controlOut.watchdog" VarB="API^Term 2 (Input 002 bytes)^Subterm 2 (Input 002 bytes)^Outputs^Input[0]" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.speedPumpN14011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[16]"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.speedPumpN14011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[17]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.speedPumpN14011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[18]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.speedPumpN14011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[19]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.tempSetpointN10011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[0]"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.tempSetpointN10011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[1]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.tempSetpointN10011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[2]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Outputs^GVL_Lauda.laudaChiller.valueOut.tempSetpointN10011" VarB="API^Term 3 (Input 032 bytes)^Subterm 3 (Input 032 bytes)^Outputs^Input[3]" Size="8" OffsA="24"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

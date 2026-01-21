@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_hyflowROS" Id="{efad304e-64c8-42c8-b1df-f710629ba101}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_hyflowROS :
+STRUCT
+	
+	telemetry : ST_dispenserTelemetry;
+	
+	command : ST_command;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

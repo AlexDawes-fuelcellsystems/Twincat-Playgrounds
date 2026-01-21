@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_HyFlow" Id="{d0d666e7-02f6-4dfd-a8e0-2097e2940ae1}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	rosData : ST_hyflowROS;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

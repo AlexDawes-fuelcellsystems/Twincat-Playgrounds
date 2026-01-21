@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Value1" Id="{d06954f2-d8de-4bc2-be49-0ff0852d5013}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Value1 :
+STRUCT
+	actualSetpoint AT %I*: REAL; //Actual Setpoint of chiller
+	B10011 AT %I*: REAL; //Temperature Probe HTF Outflow
+	B10511 AT %I*: REAL; //Temperature Probe HTF return (1)
+	B10512 AT %I*: REAL; //Temperature Probe HTF return (2)
+	B14011 AT %I*: REAL; //Temperature probe tank
+	B16411 AT %I*: REAL; //Pressure sensor HTF outflow
+	B18011 AT %I*: REAL; //Level Sensor Filling
+	B55111 AT %I*: REAL; //Temperature probe outflow evaporator
+	B55211 AT %I*: REAL; //Pressure sensor outflow evaporator
+	B55811 AT %I*: REAL; //Pressure sensor discharge oil pump (1)
+	B56511 AT %I*: REAL; //Temperature probe gas line (1)
+	B56811 AT %I*: REAL; //Pressure sensor condensor inlet
+	B57311 AT %I*: REAL; //Temperature probe inlet injection valve
+	B65111 AT %I*: REAL; //Temperature probe outflow evaporator
+	B65211 AT %I*: REAL; //Pressure sensor outflow evaporator
+	B65511 AT %I*: REAL; //Temperature probe suction side compressor
+	B65811 AT %I*: REAL; //Pressure sensor discharge oil pump (2)
+	B66511 AT %I*: REAL; // Temperature probe gas line (2)
+	B66811 AT %I*: REAL; //Pressure sensor condensor inlet 
+	B67311 AT %I*: REAL; //Temperature probe inlet injection valve
+	N10011 AT %I*: REAL; //Actuating signal temperature controller TIC N10011
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

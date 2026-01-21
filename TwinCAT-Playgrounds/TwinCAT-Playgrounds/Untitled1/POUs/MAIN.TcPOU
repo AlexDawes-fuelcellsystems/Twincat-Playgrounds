@@ -1,13 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{a6bbeb2f-89d6-4cfd-a59d-def95942e45e}">
+  <POU Name="MAIN" Id="{a6bbeb2f-89d6-4cfd-a59d-def95942e45e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	startProgram : BOOL := FALSE;
+	
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF GVL_Hyflow.rosData.command.Command = 3 THEN
+	IF GVL_Hyflow.rosData.command.payload[1] = 123456 THEN
+		GVL_Hyflow.rosData.command.AckID := GVL_Hyflow.rosData.command.CommandID;
+		GVL_Hyflow.rosData.telemetry.name:='alex';
+		GVL_Hyflow.rosData.telemetry.roleName:='Engineer';
+		GVL_Hyflow.rosData.telemetry.lastName:= 'Dawes';
+	    GVL_Hyflow.rosData.command.result:= 0;
+	ELSE
+		GVL_Hyflow.rosData.command.result:= S_FALSE;
+		GVL_Hyflow.rosData.command.AckID:= GVL_Hyflow.rosData.command.CommandID;;
+	END_IF
+ELSE
+	GVL_Hyflow.rosData.command.AckID := GVL_Hyflow.rosData.command.CommandID;
+	GVL_Hyflow.rosData.command.result:= 0;
+END_IF
+
+
+
+
+
+	
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Value0" Id="{520b1f86-a1f4-407e-be32-1af554a9c9c3}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Value0 :
+STRUCT
+	tempSetpointN10011 AT %Q* : REAL;
+	speedPumpN14011  AT %Q*: REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

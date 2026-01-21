@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_States" Id="{fbdfb62d-eb4a-4869-bc2b-a5d5a28b6ea2}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_States :
+STRUCT
+	watchdog AT %I*: BOOL;
+	operation AT %I*: BOOL;
+	V50011On AT %I*: BOOL;
+	v60011On AT %I*: BOOL;
+	remote AT %I*: BOOL;
+	filling AT %I*: BOOL;
+	heating AT %I*: BOOL;
+	cooling AT %I*: BOOL;
+	ready AT %I*: BOOL;
+	commonFault AT %I*: BOOL;
+	commonWarning AT %I*: BOOL;
+	criticalError AT %I*: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

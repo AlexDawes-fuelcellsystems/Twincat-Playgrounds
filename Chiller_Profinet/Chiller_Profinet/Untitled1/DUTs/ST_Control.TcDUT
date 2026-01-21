@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Control" Id="{bab4ca41-5507-46b6-87cb-07a771498c6b}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Control :
+STRUCT
+	watchdog AT %Q*: BOOL;
+	start_Stop AT %Q* : BOOL;
+	reset AT %Q* : BOOL;
+	remote AT %Q* : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

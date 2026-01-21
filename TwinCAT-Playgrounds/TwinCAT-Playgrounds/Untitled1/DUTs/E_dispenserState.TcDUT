@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="E_dispenserState" Id="{1e167a70-ee4f-43cd-8817-468815410fd8}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+{attribute 'to_string'}
+TYPE E_dispenserState :
+(
+	INIT 				:= 0,
+	OPEN_HIGHEST_TANK 	:= 1,
+	PRESSURE_PULSE		:= 2,
+	CALCULATION			:= 3,
+	OPEN_TANK			:= 4,
+	FILL				:= 5,
+	SWITCH_TANK			:= 6,
+	VENT_NOZZLE			:= 7,	
+	PASS				:= 8,
+	FAIL				:= 9
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

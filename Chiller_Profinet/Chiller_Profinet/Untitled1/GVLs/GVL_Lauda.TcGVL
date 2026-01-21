@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_Lauda" Id="{dfdd94c5-b704-49fd-92e0-b472372d4a00}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	laudaChiller : ST_Lauda;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

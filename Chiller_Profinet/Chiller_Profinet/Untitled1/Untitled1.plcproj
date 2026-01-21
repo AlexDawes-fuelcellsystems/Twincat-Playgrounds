@@ -3,43 +3,41 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{76ab6082-2564-459c-be3c-53c465b578ef}</ProjectGuid>
+    <ProjectGuid>{044ac65a-00ff-4c27-9ecf-cb1c9b5eea37}</ProjectGuid>
     <SubObjectsSortedByName>true</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>false</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>Untitled1</Name>
     <ProgramVersion>3.1.4026.17</ProgramVersion>
-    <Application>{e685de0f-2d54-4a41-8c66-b61bf178f92b}</Application>
-    <TypeSystem>{671169b7-8462-4b83-8d51-58aff94ac865}</TypeSystem>
-    <Implicit_Task_Info>{f0c73cc5-c247-4a29-bb89-503a89f65c7a}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{6e07361c-d26d-48fc-a7b5-2c6dd668d8d1}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{0f630e3a-bb66-4244-b1e7-2fd640ee7bc9}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{3e907f82-ff7d-467b-bba0-eea285f0f662}</LibraryReferences>
+    <Application>{a107c6fb-dfdf-4bd4-a583-aaa7445fbd39}</Application>
+    <TypeSystem>{fead2c61-fce6-487a-98ba-377acca96673}</TypeSystem>
+    <Implicit_Task_Info>{4d106a4d-66a7-4550-83b8-565d87e9d696}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{e357ae22-8e37-423f-af79-10f92b110360}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{bdee6bea-4c88-4cd8-8854-c69d5127cdde}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{8268a7c6-e9c1-4090-820e-076e2cbedb4c}</LibraryReferences>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DUTs\E_dispenserState.TcDUT">
+    <Compile Include="DUTs\ST_Alarms.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\E_hyflowCommand.TcDUT">
+    <Compile Include="DUTs\ST_Control.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\E_nozzleState.TcDUT">
+    <Compile Include="DUTs\ST_Lauda.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\ST_command.TcDUT">
+    <Compile Include="DUTs\ST_States.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\ST_dispenserTelemetry.TcDUT">
+    <Compile Include="DUTs\ST_Value0.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\ST_hyflowROS.TcDUT">
+    <Compile Include="DUTs\ST_Value1.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\ST_nozzleData.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_HyFlow.TcGVL">
+    <Compile Include="GVLs\GVL_Lauda.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
@@ -88,6 +86,23 @@
           <v n="Name">"{192FAD59-8248-4824-A8DE-9177C94C195A}"</v>
           <d n="SubKeys" t="Hashtable" />
           <d n="Values" t="Hashtable" />
+        </o>
+        <v>{246001F4-279D-43AC-B241-948EB31120E1}</v>
+        <o>
+          <v n="Name">"{246001F4-279D-43AC-B241-948EB31120E1}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" ckt="String">
+            <v>ExtendedSettings</v>
+            <v>false</v>
+            <v>GeneralPropertySupport</v>
+            <v>false</v>
+            <v>GlobalTextListFilePath</v>
+            <v>""</v>
+            <v>GlobalVisuImageFilePath</v>
+            <v>"%APPLICATIONPATH%\"</v>
+            <v>ImplicitChecksForVisualizationPOUs</v>
+            <v>true</v>
+          </d>
         </o>
         <v>{29BD8D0C-3586-4548-BB48-497B9A01693F}</v>
         <o>

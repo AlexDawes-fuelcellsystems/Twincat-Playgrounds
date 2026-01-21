@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+	<!--***** GSDML was created by TwinCAT *****
+ Original GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+ TwinCAT Version: v3.1 (Build 4026.19)
+ Writer Version: 3
+ ***************************************************-->
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x010C" DeviceID="0x0011">
+			<InfoText TextId="T_ID_DEV_DESCRIPTION"/>
+			<VendorName Value="HMS Industrial Networks"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="ABS_V1" PhysicalSlots="0..63" ModuleIdentNumber="0xA0000000" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="ABX-PRT" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V1.0">
+					<ModuleInfo CategoryRef="CAT_REF_MIGRATION_DAP">
+						<Name TextId="T_ID_ABS_PRT_DAP1"/>
+						<InfoText TextId="T_ID_V1_DEV_DESCRIPTION"/>
+						<VendorName Value="HMS Industrial Networks"/>
+						<OrderNumber Value="Anybus X-gateway"/>
+						<HardwareRelease Value="2"/>
+						<SoftwareRelease Value="V3.29"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="640" MaxOutputLength="640"/>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="ABS_V1" SubmoduleIdentNumber="0x00000000" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<RecordDataList/>
+							<ModuleInfo>
+								<Name TextId="T_ID_ABS_PRT_DAP2"/>
+								<InfoText TextId="T_ID_V2_DEV_DESCRIPTION"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<GraphicsList>
+				<GraphicItem ID="1" GraphicFile="GSDML-010C-0011-ABX-PRT"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="CAT_REF_MIGRATION_DAP" TextId="T_ID_MIGRATION_DAP"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="T_ID_ABS_PRT_DAP1" Value="RT Migration"/>
+					<Text TextId="T_ID_ABS_PRT_DAP2" Value="RT Standard"/>
+					<Text TextId="T_ID_DEV_DESCRIPTION" Value="Anybus X-gateway PROFINET IO module"/>
+					<Text TextId="T_ID_V1_DEV_DESCRIPTION" Value="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics."/>
+					<Text TextId="T_ID_V2_DEV_DESCRIPTION" Value="This Device Access Point supports RT communication"/>
+					<Text TextId="T_ID_MIGRATION_DAP" Value="Migration"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="T_ID_ABS_PRT_DAP1" Value="RT Migration"/>
+					<Text TextId="T_ID_ABS_PRT_DAP2" Value="RT Standard"/>
+					<Text TextId="T_ID_DEV_DESCRIPTION" Value="Anybus X-gateway PROFINET IO module"/>
+					<Text TextId="T_ID_V1_DEV_DESCRIPTION" Value="Dieser Device Access Point kann von IO-Controllern benutzt werden, die nicht erweiterte PROFINET-Diagnosen unterstützen."/>
+					<Text TextId="T_ID_V2_DEV_DESCRIPTION" Value="Dieser Device Access Point unterstützt RT-kommunikation"/>
+					<Text TextId="T_ID_MIGRATION_DAP" Value="Migration"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>
