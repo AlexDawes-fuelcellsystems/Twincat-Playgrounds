@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Cmd" Id="{d4ceb71a-9eb9-4447-89aa-858f5e50859c}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+(*
+Name: ST_Cmd
+Purpose: Standard command structure used for request/acknowledge patterns between modules and HMI/ROS.
+*)
+TYPE ST_Cmd :
+STRUCT
+	// Read
+	id  : UDINT; 
+	cmd : DINT; 
+	payload : ARRAY [1..5] OF UDINT; 
+	
+	// Write 
+	ackID : UDINT;
+	result : HRESULT; 
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

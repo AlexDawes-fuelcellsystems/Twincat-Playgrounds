@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Chiller" Id="{ff4fd094-7be6-4b3f-8123-efaae2acfb8d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Chiller
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -9,7 +9,7 @@ TYPE E_nozzleState :
 	disabled := 0,
 	standby := 1,
 	refuelling := 2
-);
+)DINT;
 END_TYPE
 ]]></Declaration>
   </DUT>

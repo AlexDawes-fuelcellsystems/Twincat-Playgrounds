@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_DispenserNozzle" Id="{86a4588b-16ab-4088-9c1c-d3006bea34d8}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_DispenserNozzle :
+STRUCT
+	state : E_NozzleState := 1;
+	inUse : BOOL;
+	pressure : REAL; 
+	temperature : REAL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

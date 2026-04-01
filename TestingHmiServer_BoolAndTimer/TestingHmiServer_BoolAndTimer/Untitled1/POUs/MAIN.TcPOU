@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{94d9f5bf-9ffa-4933-93bc-0470649b694a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	test : BOOL;
+	test_timer : INT := 0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[test_timer:= test_timer +1;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

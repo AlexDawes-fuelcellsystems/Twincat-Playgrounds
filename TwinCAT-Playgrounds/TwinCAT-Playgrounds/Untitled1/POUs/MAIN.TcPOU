@@ -4,26 +4,40 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	startProgram : BOOL := FALSE;
-	
+	logindelay: TON;
+	loginReq: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF GVL_Hyflow.rosData.command.Command = 3 THEN
-	IF GVL_Hyflow.rosData.command.payload[1] = 123456 THEN
-		GVL_Hyflow.rosData.command.AckID := GVL_Hyflow.rosData.command.CommandID;
-		GVL_Hyflow.rosData.telemetry.name:='alex';
-		GVL_Hyflow.rosData.telemetry.roleName:='Engineer';
-		GVL_Hyflow.rosData.telemetry.lastName:= 'Dawes';
-	    GVL_Hyflow.rosData.command.result:= 0;
+      <ST><![CDATA[loginReq :=
+    (GVL_Exchange.Frontend.cmd.cmd = 3)
+    AND (GVL_Exchange.Frontend.cmd.payload[1] = 123456);
+
+(* Run the TON every scan *)
+logindelay(IN := loginReq, PT := T#1S);
+
+
+IF GVL_Exchange.Frontend.cmd.cmd= 3 THEN
+	IF GVL_Exchange.Frontend.cmd.payload[1] = 123456 THEN
+		logindelay.PT := T#1S;
+		logindelay.IN := TRUE;
+		GVL_Exchange.Frontend.role:=1;
+		GVL_Exchange.Frontend.firstName := 'Alex';
+		GVL_Exchange.Frontend.lastName := 'Dawes';
+		GVL_Exchange.Frontend.cmd.result := 0;
+		GVL_Exchange.Frontend.cmd.ackID := GVL_Exchange.Frontend.cmd.id;
+		
 	ELSE
-		GVL_Hyflow.rosData.command.result:= S_FALSE;
-		GVL_Hyflow.rosData.command.AckID:= GVL_Hyflow.rosData.command.CommandID;;
+		GVL_Exchange.Frontend.cmd.result:= S_FALSE;
+		GVL_Exchange.Frontend.cmd.ackID:= GVL_Exchange.Frontend.cmd.id;
 	END_IF
 ELSE
-	GVL_Hyflow.rosData.command.AckID := GVL_Hyflow.rosData.command.CommandID;
-	GVL_Hyflow.rosData.command.result:= 0;
+	GVL_Exchange.Frontend.cmd.ackID:= GVL_Exchange.Frontend.cmd.id;
+	GVL_Exchange.Frontend.cmd.result := 0;
 END_IF
-
+IF logindelay.Q THEN
+	GVL_Exchange.frontend.state := 2;
+END_IF
 
 
 

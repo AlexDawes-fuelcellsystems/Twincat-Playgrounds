@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{fc441e64-5649-46f6-8fbe-53d9eb4353a8}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+
+fbJson : FB_JsonDomParser;
+jsonRoot :  SJsonValue;
+jsonProp : SJsonValue;
+jsonIterator : SJsonValue;
+jsonIteratorEnd : SJsonValue;
+bLoadJsonFile : BOOL;
+sTimestamp : STRING;
+fSensor1 : LREAL;
+aSensor2 : ARRAY[0..4] OF DINT;
+nSensor3 : DINT;
+i : UINT;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bLoadJsonFile = TRUE THEN
+  fbJson.LoadDocumentFromFile('C:\Users\AlexanderDawes\OneDrive - Fuel Cell Systems\Documents\Software notes\TwincatJsonParseExample\TwincatExample.json', bLoadJsonFile);
+  jsonRoot := fbJson.GetDocumentRoot();
+  jsonProp := fbJson.FindMember(jsonRoot, 'Timestamp');
+  IF (jsonProp <> 0) THEN
+  sTimestamp := fbJson.GetString(jsonProp);
+  END_IF
+  jsonProp := fbJson.FindMemberPath(jsonRoot, 'Values/Sensor1');
+  IF (jsonProp <> 0) THEN
+  fSensor1 := fbJson.GetDouble(jsonProp);
+  END_IF
+  jsonProp := fbJson.FindMemberPath(jsonRoot, 'Values/Sensor2');
+  IF (jsonProp <> 0) THEN
+  jsonIterator := fbJson.ArrayBegin(jsonProp);
+  jsonIteratorEnd := fbJson.ArrayEnd(jsonProp);
+  WHILE jsonIterator <> jsonIteratorEnd DO
+    IF (jsonProp <> 0) THEN
+      aSensor2[i] := fbJson.GetInt(jsonIterator);
+    END_IF
+    jsonIterator := fbJson.NextArray(jsonIterator);
+    i := i + 1;
+  END_WHILE
+  i := 0;
+  END_IF
+  jsonProp := fbJson.FindMemberPath(jsonRoot, 'Values/Sensor3');
+  IF (jsonProp <> 0) THEN
+    nSensor3 := fbJson.GetInt(jsonProp);
+  END_IF
+
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

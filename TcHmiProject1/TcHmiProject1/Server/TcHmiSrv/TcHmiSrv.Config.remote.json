@@ -1,0 +1,9 @@
+{
+    "BASE_HMI_URL": "",
+    "CERTIFICATEEXPIRATION": "P1095DT18H",
+    "MAXREQUESTSIZE": 1048576,
+    "REQUIREAUTH": 0,
+    "VIRTUALDIRECTORIES": {
+        "/": "www"
+    }
+}

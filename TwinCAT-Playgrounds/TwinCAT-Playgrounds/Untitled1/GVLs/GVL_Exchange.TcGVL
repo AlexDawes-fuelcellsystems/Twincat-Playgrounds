@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="GVL_Exchange" Id="{d2863a7c-52b3-4c35-8128-b55e014182d7}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	frontend : ST_Frontend;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
