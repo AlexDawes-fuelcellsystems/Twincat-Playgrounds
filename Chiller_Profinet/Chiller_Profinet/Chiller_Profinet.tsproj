@@ -53,7 +53,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="10000" AmsPort="301" AmsNetId="192.168.1.166.1.1">
+				<Task Id="4" Priority="1" CycleTime="10000" AmsPort="301">
 					<Name>Task_Profinet</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -1286,6 +1286,14 @@ Submodule Info: Input 016 bytes
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.remote" VarB="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" Size="1" OffsB="4"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.v60011On" VarB="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" Size="1" OffsB="3"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.watchdog" VarB="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn._230VAC" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="2"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn._24VDC" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="3"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn._24VDC_Puffer" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="4"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn.communicationDCS" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn.eStopExternal" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn.eStopInternal" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn.profinet" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="5"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerAlarmsIn.sfSafteySPS" VarB="API^Term 7 (Input 016 bytes)^Subterm 9 (Input 016 bytes)^Inputs^Input[0]" Size="1" OffsB="7"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[4]" Size="8" OffsA="24"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[5]" Size="8" OffsA="16"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[6]" Size="8" OffsA="8"/>

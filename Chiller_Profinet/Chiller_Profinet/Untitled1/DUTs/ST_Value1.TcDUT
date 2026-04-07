@@ -24,7 +24,7 @@ STRUCT
 	B66511 AT %I*: REAL; // Temperature probe gas line (2)
 	B66811 AT %I*: REAL; //Pressure sensor condensor inlet 
 	B67311 AT %I*: REAL; //Temperature probe inlet injection valve
-	N10011 AT %I*: REAL; //Actuating signal temperature controller TIC N10011
+	N10011 AT %I*: REAL; //Actuating signal temperature controller TIC N10011 (0-100)
 END_STRUCT
 END_TYPE
 ]]></Declaration>
