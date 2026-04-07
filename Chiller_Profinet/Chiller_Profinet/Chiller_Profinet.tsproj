@@ -648,7 +648,7 @@ SW Release Version: V3.29]]></Comment>
 							<Type>WORD</Type>
 						</Var>
 					</Vars>
-					<Profinet DeviceId="17" VendorId="268" FrameOffset="49152" IPAdd="a9fed501" ProtocolType="3" BoxOnDeviceTyp="140" MaxPhysSlotNr="63" AvailableSlots="0..63" InstanceServerPort="61000" InstanceClientPort="60000" InstanceId="1" InstanceNumberOfARs="1" InstanceNumberOfAPIs="1" MinDeviceInterval="64" NrOfGsdmlDap="3" SavePnIoBoxValues="0100" Phase="1" WatchdogFaktor="3" ReductionRatio="4" SendClockFaktor="32" MaxInputLen="640" MaxOutputLen="640" SendClockFactorData="200040008000" RedRatio="0100020004000800100020004000800000010002" BoxTypeInfo="This Device Access Point supports RT communication" GSDMLPath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml" ImagePath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-010C-0011-ABX-PRT.bmp" MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO" OrderNr="Anybus X-gateway" DefaultDNSName="ABX-PRT" VendorName="HMS Industrial Networks" FamDescription="Anybus X-gateway PROFINET IO module" GraphicFile="GSDML-010C-0011-ABX-PRT" SWVersion="V3.29" HWVersion="2" AltLanguage="7">
+					<Profinet DeviceId="17" VendorId="268" FrameOffset="49152" IPAdd="a9fed501" ProtocolType="3" BoxOnDeviceTyp="140" MaxPhysSlotNr="63" AvailableSlots="0..63" InstanceServerPort="61000" InstanceClientPort="60000" InstanceId="1" InstanceNumberOfARs="1" InstanceNumberOfAPIs="1" MinDeviceInterval="64" NrOfGsdmlDap="3" SavePnIoBoxValues="0100" Phase="1" WatchdogFaktor="3" ReductionRatio="16" SendClockFaktor="32" MaxInputLen="640" MaxOutputLen="640" SendClockFactorData="200040008000" RedRatio="0100020004000800100020004000800000010002" BoxTypeInfo="This Device Access Point supports RT communication" GSDMLPath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml" ImagePath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-010C-0011-ABX-PRT.bmp" MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO" OrderNr="Anybus X-gateway" DefaultDNSName="ABX-PRT" VendorName="HMS Industrial Networks" FamDescription="Anybus X-gateway PROFINET IO module" GraphicFile="GSDML-010C-0011-ABX-PRT" SWVersion="V3.29" HWVersion="2" AltLanguage="7">
 						<UsedGsdmlModule ModuleIdentNumber="-805306368" ModuleName="DAP Module" InfoText="This Device Access Point supports RT communication" OrderNumber="Anybus X-gateway">
 							<Slot>0</Slot>
 						</UsedGsdmlModule>
@@ -1294,6 +1294,78 @@ Submodule Info: Input 016 bytes
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[11]"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[8]" Size="8" OffsA="24"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[9]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10512" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[12]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10512" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[13]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10512" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[14]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10512" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[15]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B14011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[16]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B14011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[17]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B14011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[18]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B14011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[19]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B16411" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[20]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B16411" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[21]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B16411" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[22]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B16411" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[23]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B18011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[24]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B18011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[25]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B18011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[26]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B18011" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[27]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[28]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[29]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[30]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[31]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[32]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[33]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[34]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[35]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[36]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[37]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[38]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B55811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[39]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[40]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[41]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[42]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[43]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[44]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[45]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[46]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B56811" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[47]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B57311" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[48]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B57311" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[49]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B57311" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[50]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B57311" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[51]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[52]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[53]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[54]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65111" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[55]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[56]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[57]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[58]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65211" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[59]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[60]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[61]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[62]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65511" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[63]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[0]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[1]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[2]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B65811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[3]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66511" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[4]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66511" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[5]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66511" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[6]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66511" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[7]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[10]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[11]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[8]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B66811" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[9]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B67311" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[12]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B67311" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[13]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B67311" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[14]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B67311" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[15]"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.N10011" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[16]" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.N10011" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[17]" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.N10011" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[18]" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.N10011" VarB="API^Term 6 (Input 032 bytes)^Subterm 8 (Input 032 bytes)^Inputs^Input[19]"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.actualSetpoint" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[0]" Size="8" OffsA="24"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.actualSetpoint" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[1]" Size="8" OffsA="16"/>
 				<Link VarA="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.actualSetpoint" VarB="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[2]" Size="8" OffsA="8"/>
