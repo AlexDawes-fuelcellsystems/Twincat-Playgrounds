@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.19" ClassName="CPnIoBoxDef" SubType="9121">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000002}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..1] OF BYTE</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000020}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..31] OF BYTE</Name>
+			<BitSize>256</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>32</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000004}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..3] OF BYTE</Name>
+			<BitSize>32</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000040}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..63] OF BYTE</Name>
+			<BitSize>512</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>64</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000300000010}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..15] OF BYTE</Name>
+			<BitSize>128</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>16</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<Box Id="1" BoxType="9121">
+		<Name>abx-prt</Name>
+		<Comment><![CDATA[GSDML Name: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Path: C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\
+VendorName: HMS Industrial Networks
+OrderNumber: Anybus X-gateway
+HW Release Version: 2
+SW Release Version: V3.29]]></Comment>
+		<ImageId>121</ImageId>
+		<Vars VarGrpType="1">
+			<Name>Inputs</Name>
+			<Var>
+				<Name>PnIoBoxState</Name>
+				<Comment><![CDATA[0 = No error
+1 = Profinet device state machine is in boot mode
+2 = Device not found
+3 = The stationname is not unique
+4 = IP could not be set
+5 = IP conflict
+6 = DCP set was not successful
+7 = Watchdog error
+8 = Datahold error
+9 = RTC3: Sync mode could not be initiated
+10 = Profinet controller has a link error
+11 = The aliasname is not unique
+12 = The automatic name assignement isn't possible - wrong device type
+13 = IOC-AR is established but no application ready
+14 = IOC-AR is established but module difference
+15 = At least one InputCR is invalid, provider in stop or problemindicator is set
+16 = At least one OutputCR is invalid, provider in stop or problemindicator is set
+31 = Only for EtherCAT gateways: WC-State of cyclic EtherCAT frame is 1
+]]></Comment>
+				<Type>WORD</Type>
+			</Var>
+			<Var>
+				<Name>PnIoBoxDiag</Name>
+				<Comment><![CDATA[0x0000 = No diagnosis
+0x0001 = IOC-AR is not established
+0x0002 = IOC-AR is established
+0x0004 = IOC-AR is established but no application ready
+0x0008 = IOC-AR is established but module difference
+0x0010 = At least one AlarmCR got a diagnosis alarm
+0x0100 = At least one InputCR is invalid
+0x0200 = At least one InputCR Provider is in stop
+0x0400 = At least one InputCR Problemindicator is set
+0x1000 = At least one OutputCR is invalid
+0x2000 = At least one OutputCR Provider is in stop
+0x4000 = At least one OutputCR Problemindicator is set
+]]></Comment>
+				<Type>WORD</Type>
+				<BitOffs>16</BitOffs>
+			</Var>
+		</Vars>
+		<Vars VarGrpType="2">
+			<Name>Outputs</Name>
+			<Var>
+				<Name>PnIoBoxCtrl</Name>
+				<Type>WORD</Type>
+			</Var>
+		</Vars>
+		<Profinet DeviceId="17" VendorId="268" FrameOffset="49152" IPAdd="a9fed501" ProtocolType="3" BoxOnDeviceTyp="140" MaxPhysSlotNr="63" AvailableSlots="0..63" InstanceServerPort="61000" InstanceClientPort="60000" InstanceId="1" InstanceNumberOfARs="1" InstanceNumberOfAPIs="1" MinDeviceInterval="64" NrOfGsdmlDap="3" SavePnIoBoxValues="0100" Phase="1" WatchdogFaktor="3" ReductionRatio="16" SendClockFaktor="32" MaxInputLen="640" MaxOutputLen="640" SendClockFactorData="200040008000" RedRatio="0100020004000800100020004000800000010002" BoxTypeInfo="This Device Access Point supports RT communication" GSDMLPath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml" ImagePath="C:\Users\AlexanderDawes\Downloads\hms-gsdml-abx-prts (2)\ABX_LCM_PROFINET IO\GSDML-010C-0011-ABX-PRT.bmp" MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO" OrderNr="Anybus X-gateway" DefaultDNSName="ABX-PRT" VendorName="HMS Industrial Networks" FamDescription="Anybus X-gateway PROFINET IO module" GraphicFile="GSDML-010C-0011-ABX-PRT" SWVersion="V3.29" HWVersion="2" AltLanguage="7">
+			<UsedGsdmlModule ModuleIdentNumber="-805306368" ModuleName="DAP Module" InfoText="This Device Access Point supports RT communication" OrderNumber="Anybus X-gateway">
+				<Slot>0</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="32" Id="22" ModuleName="Output 002 bytes" InfoText="Output 002 bytes" ModuleCategory="Output modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="96" Id="26" ModuleName="Output 032 bytes" InfoText="Output 032 bytes" ModuleCategory="Output modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="3" Id="3" ModuleName="Input 004 bytes" InfoText="Input 004 bytes" ModuleCategory="Input modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="7" Id="7" ModuleName="Input 064 bytes" InfoText="Input 064 bytes" ModuleCategory="Input modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="6" Id="6" ModuleName="Input 032 bytes" InfoText="Input 032 bytes" ModuleCategory="Input modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlModule ModuleIdentNumber="5" Id="5" ModuleName="Input 016 bytes" InfoText="Input 016 bytes" ModuleCategory="Input modules">
+				<Slot>1</Slot>
+				<Slot>2</Slot>
+				<Slot>3</Slot>
+				<Slot>4</Slot>
+				<Slot>5</Slot>
+				<Slot>6</Slot>
+				<Slot>7</Slot>
+				<Slot>8</Slot>
+				<Slot>9</Slot>
+				<Slot>10</Slot>
+				<Slot>11</Slot>
+				<Slot>12</Slot>
+				<Slot>13</Slot>
+				<Slot>14</Slot>
+				<Slot>15</Slot>
+				<Slot>16</Slot>
+				<Slot>17</Slot>
+				<Slot>18</Slot>
+				<Slot>19</Slot>
+				<Slot>20</Slot>
+				<Slot>21</Slot>
+				<Slot>22</Slot>
+				<Slot>23</Slot>
+				<Slot>24</Slot>
+				<Slot>25</Slot>
+				<Slot>26</Slot>
+				<Slot>27</Slot>
+				<Slot>28</Slot>
+				<Slot>29</Slot>
+				<Slot>30</Slot>
+				<Slot>31</Slot>
+				<Slot>32</Slot>
+				<Slot>33</Slot>
+				<Slot>34</Slot>
+				<Slot>35</Slot>
+				<Slot>36</Slot>
+				<Slot>37</Slot>
+				<Slot>38</Slot>
+				<Slot>39</Slot>
+				<Slot>40</Slot>
+				<Slot>41</Slot>
+				<Slot>42</Slot>
+				<Slot>43</Slot>
+				<Slot>44</Slot>
+				<Slot>45</Slot>
+				<Slot>46</Slot>
+				<Slot>47</Slot>
+				<Slot>48</Slot>
+				<Slot>49</Slot>
+				<Slot>50</Slot>
+				<Slot>51</Slot>
+				<Slot>52</Slot>
+				<Slot>53</Slot>
+				<Slot>54</Slot>
+				<Slot>55</Slot>
+				<Slot>56</Slot>
+				<Slot>57</Slot>
+				<Slot>58</Slot>
+				<Slot>59</Slot>
+				<Slot>60</Slot>
+				<Slot>61</Slot>
+				<Slot>62</Slot>
+				<Slot>63</Slot>
+			</UsedGsdmlModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="ABS_V2" SubModuleName="RT Standard" InfoText="This Device Access Point supports RT communication"/>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="22" SubModuleName="Output 002 bytes" InfoText="Output 002 bytes" SubModuleCategory="Output modules">
+				<DataItemOut Name="Output" VarSize="16" VarType="{18071995-0000-0000-0000-000300000002}"/>
+			</UsedGsdmlSubModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="26" SubModuleName="Output 032 bytes" InfoText="Output 032 bytes" SubModuleCategory="Output modules">
+				<DataItemOut Name="Output" VarSize="256" VarType="{18071995-0000-0000-0000-000300000020}"/>
+			</UsedGsdmlSubModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="3" SubModuleName="Input 004 bytes" InfoText="Input 004 bytes" SubModuleCategory="Input modules">
+				<DataItemIn Name="Input" VarSize="32" VarType="{18071995-0000-0000-0000-000300000004}"/>
+			</UsedGsdmlSubModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="7" SubModuleName="Input 064 bytes" InfoText="Input 064 bytes" SubModuleCategory="Input modules">
+				<DataItemIn Name="Input" VarSize="512" VarType="{18071995-0000-0000-0000-000300000040}"/>
+			</UsedGsdmlSubModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="6" SubModuleName="Input 032 bytes" InfoText="Input 032 bytes" SubModuleCategory="Input modules">
+				<DataItemIn Name="Input" VarSize="256" VarType="{18071995-0000-0000-0000-000300000020}"/>
+			</UsedGsdmlSubModule>
+			<UsedGsdmlSubModule SubSlotNumber="1" TypeOfSubmodule="3" Id="5" SubModuleName="Input 016 bytes" InfoText="Input 016 bytes" SubModuleCategory="Input modules">
+				<DataItemIn Name="Input" VarSize="128" VarType="{18071995-0000-0000-0000-000300000010}"/>
+			</UsedGsdmlSubModule>
+			<API Id="1">
+				<Name>API</Name>
+				<ImageId>4</ImageId>
+				<Module Id="#x031d0001" DAP="true" ModuleIdentNumber="-805306368" ModuleInfo="This Device Access Point supports RT communication">
+					<Name>Term 1 (DAP Module)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: This Device Access Point supports RT communication
+OrderNumber: Anybus X-gateway]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0001" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="ABS_V2" AddSubModFlags="60">
+						<Name>Subterm 1 (RT Standard)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: This Device Access Point supports RT communication
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+					<SubModule Id="#x031c0002" SubModuleIdentNumber="1" TypeOfSubModule="1" SubSlotNumber="32768" IsFixSubmodule="true" SubModuleID="Interface" InterfaceData="0100000000000000000000000000000000000000000040000200000000000000">
+						<Name>Subterm 2 (Interface)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+					<SubModule Id="#x031c0003" SubModuleIdentNumber="2" TypeOfSubModule="2" SubSlotNumber="32769" IsFixSubmodule="true" SubModuleID="Port 1" PortData="00000000000000000000000000000000000000000000000000000000">
+						<Name>Subterm 3 (RJ45 100 MBit/s)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0002" ModuleIdentNumber="32" SlotNumber="1" ModuleInfo="Output 002 bytes" ModuleID="22" DirectDeletable="true">
+					<Name>Term 2 (Output 002 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Output 002 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0004" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="22">
+						<Name>Subterm 4 (Output 002 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Output 002 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+							<Var>
+								<Name>Output</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000002}">ARRAY [0..1] OF BYTE</Type>
+								<BitOffs>16</BitOffs>
+							</Var>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0003" ModuleIdentNumber="96" SlotNumber="2" ModuleInfo="Output 032 bytes" ModuleID="26" DirectDeletable="true">
+					<Name>Term 3 (Output 032 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Output 032 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0005" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="26">
+						<Name>Subterm 5 (Output 032 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Output 032 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+							<Var>
+								<Name>Output</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000020}">ARRAY [0..31] OF BYTE</Type>
+								<BitOffs>32</BitOffs>
+							</Var>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0004" ModuleIdentNumber="3" SlotNumber="3" ModuleInfo="Input 004 bytes" ModuleID="3" DirectDeletable="true">
+					<Name>Term 4 (Input 004 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Input 004 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0006" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="3">
+						<Name>Subterm 6 (Input 004 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Input 004 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+							<Var>
+								<Name>Input</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000004}">ARRAY [0..3] OF BYTE</Type>
+								<BitOffs>32</BitOffs>
+							</Var>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0005" ModuleIdentNumber="7" SlotNumber="4" ModuleInfo="Input 064 bytes" ModuleID="7" DirectDeletable="true">
+					<Name>Term 5 (Input 064 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Input 064 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0007" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="7">
+						<Name>Subterm 7 (Input 064 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Input 064 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+							<Var>
+								<Name>Input</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000040}">ARRAY [0..63] OF BYTE</Type>
+								<BitOffs>64</BitOffs>
+							</Var>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0006" ModuleIdentNumber="6" SlotNumber="5" ModuleInfo="Input 032 bytes" ModuleID="6" DirectDeletable="true">
+					<Name>Term 6 (Input 032 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Input 032 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0008" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="6">
+						<Name>Subterm 8 (Input 032 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Input 032 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+							<Var>
+								<Name>Input</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000020}">ARRAY [0..31] OF BYTE</Type>
+								<BitOffs>576</BitOffs>
+							</Var>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+				</Module>
+				<Module Id="#x031d0007" ModuleIdentNumber="5" SlotNumber="6" ModuleInfo="Input 016 bytes" ModuleID="5" DirectDeletable="true">
+					<Name>Term 7 (Input 016 bytes)</Name>
+					<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Module Info: Input 016 bytes
+]]></Comment>
+					<ImageId>182</ImageId>
+					<SubModule Id="#x031c0009" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="5">
+						<Name>Subterm 9 (Input 016 bytes)</Name>
+						<Comment><![CDATA[GSDML: GSDML-V2.3-HMS-ANYBUS_X_GATEWAY_PROFINET_IO-20161110.xml
+Submodule Info: Input 016 bytes
+]]></Comment>
+						<ImageId>183</ImageId>
+						<Vars VarGrpType="1">
+							<Name>Inputs</Name>
+							<Var>
+								<Name>Input</Name>
+								<Type GUID="{18071995-0000-0000-0000-000300000010}">ARRAY [0..15] OF BYTE</Type>
+								<BitOffs>832</BitOffs>
+							</Var>
+						</Vars>
+						<Vars VarGrpType="2">
+							<Name>Outputs</Name>
+						</Vars>
+					</SubModule>
+				</Module>
+			</API>
+		</Profinet>
+	</Box>
+	<Mappings>
+		<OwnerA Name="__THIS__">
+			<OwnerB Name="TIPC^Untitled1^Untitled1 Instance">
+				<Link VarA="API^Term 2 (Output 002 bytes)^Subterm 4 (Output 002 bytes)^Outputs^Output[0]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.controlOut.remote" Size="1" OffsA="3"/>
+				<Link VarA="API^Term 2 (Output 002 bytes)^Subterm 4 (Output 002 bytes)^Outputs^Output[0]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.controlOut.reset" Size="1" OffsA="2"/>
+				<Link VarA="API^Term 2 (Output 002 bytes)^Subterm 4 (Output 002 bytes)^Outputs^Output[0]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.controlOut.start_Stop" Size="1" OffsA="1"/>
+				<Link VarA="API^Term 2 (Output 002 bytes)^Subterm 4 (Output 002 bytes)^Outputs^Output[0]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.controlOut.watchdog" Size="1"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[0]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.tempSetpointN10011"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[16]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.speedPumpN14011"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[17]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.speedPumpN14011" Size="8" OffsB="8"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[18]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.speedPumpN14011" Size="8" OffsB="16"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[19]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.speedPumpN14011" Size="8" OffsB="24"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[1]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.tempSetpointN10011" Size="8" OffsB="8"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[2]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.tempSetpointN10011" Size="8" OffsB="16"/>
+				<Link VarA="API^Term 3 (Output 032 bytes)^Subterm 5 (Output 032 bytes)^Outputs^Output[3]" VarB="PlcTask Outputs^GVL_Lauda.LaudaChillerWrites.valueOut.tempSetpointN10011" Size="8" OffsB="24"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.V50011On" Size="1" OffsA="2"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.cooling" Size="1" OffsA="7"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.filling" Size="1" OffsA="5"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.heating" Size="1" OffsA="6"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.operation" Size="1" OffsA="1"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.remote" Size="1" OffsA="4"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.v60011On" Size="1" OffsA="3"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.watchdog" Size="1"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[1]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.commonFault" Size="1" OffsA="1"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[1]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.commonWarning" Size="1" OffsA="2"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[1]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.criticalError" Size="1" OffsA="3"/>
+				<Link VarA="API^Term 4 (Input 004 bytes)^Subterm 6 (Input 004 bytes)^Inputs^Input[1]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChilleStatesIn.ready" Size="1"/>
+				<Link VarA="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[0]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.actualSetpoint"/>
+				<Link VarA="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[1]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10011" Size="8" OffsB="8"/>
+				<Link VarA="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[2]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10511" Size="8" OffsB="16"/>
+				<Link VarA="API^Term 5 (Input 064 bytes)^Subterm 7 (Input 064 bytes)^Inputs^Input[3]" VarB="PlcTask Inputs^GVL_Lauda.LaudaChillerReads.ChillerValuesIn.B10512" Size="8" OffsB="24"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>

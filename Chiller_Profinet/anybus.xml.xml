@@ -1,0 +1,963 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+<ProfileHeader>
+<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+<ProfileRevision>1.00</ProfileRevision>
+<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+<ProfileClassID>Device</ProfileClassID>
+<ISO15745Reference>
+<ISO15745Part>4</ISO15745Part>
+<ISO15745Edition>1</ISO15745Edition>
+<ProfileTechnology>GSDML</ProfileTechnology>
+</ISO15745Reference>
+</ProfileHeader>
+<ProfileBody>
+<DeviceIdentity VendorID="0x010C" DeviceID="0x0011">
+<InfoText TextId="T_ID_DEV_DESCRIPTION"/>
+<VendorName Value="HMS Industrial Networks"/>
+</DeviceIdentity>
+<DeviceFunction>
+<Family MainFamily="Gateway" ProductFamily="Anybus X-gateway PN IO"/>
+</DeviceFunction>
+<ApplicationProcess>
+<!--  ============================================================================================  -->
+<!--    List of Device Access Points (DAP)                                                          -->
+<!--  ============================================================================================  -->
+<DeviceAccessPointList>
+<DeviceAccessPointItem ID="ABS_V1" PhysicalSlots="0..63" ModuleIdentNumber="0xA0000000" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="ABX-PRT" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V1.0">
+<ModuleInfo CategoryRef="CAT_REF_MIGRATION_DAP">
+<Name TextId="T_ID_ABS_PRT_DAP1"/>
+<InfoText TextId="T_ID_V1_DEV_DESCRIPTION"/>
+<VendorName Value="HMS Industrial Networks"/>
+<OrderNumber Value="Anybus X-gateway"/>
+<HardwareRelease Value="2"/>
+<SoftwareRelease Value="V3.29"/>
+</ModuleInfo>
+<IOConfigData MaxInputLength="640" MaxOutputLength="640"/>
+<UseableModules>
+<ModuleItemRef ModuleItemTarget="0" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="41" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="42" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="43" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="44" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="45" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="46" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="47" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="48" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="49" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="50" AllowedInSlots="1..63"/>
+</UseableModules>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="ABS_V1" SubmoduleIdentNumber="0x00000000" Writeable_IM_Records="1 2 3 4">
+<IOData IOPS_Length="1" IOCS_Length="1"> </IOData>
+<RecordDataList/>
+<ModuleInfo>
+<Name TextId="T_ID_ABS_PRT_DAP2"/>
+<InfoText TextId="T_ID_V2_DEV_DESCRIPTION"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+<Graphics>
+<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+</Graphics>
+</DeviceAccessPointItem>
+<DeviceAccessPointItem ID="ABS_V15" PhysicalSlots="0..63" ModuleIdentNumber="0xD0000000" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="ABX-PRT" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V1.0">
+<ModuleInfo CategoryRef="CAT_REF_MIGRATION_DAP">
+<Name TextId="T_ID_ABS_PRT_DAP15"/>
+<InfoText TextId="T_ID_V15_DEV_DESCRIPTION"/>
+<VendorName Value="HMS Industrial Networks"/>
+<OrderNumber Value="Anybus X-gateway"/>
+<HardwareRelease Value="2"/>
+<SoftwareRelease Value="V3.29"/>
+</ModuleInfo>
+<IOConfigData MaxInputLength="640" MaxOutputLength="640"/>
+<UseableModules>
+<ModuleItemRef ModuleItemTarget="0" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="41" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="42" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="43" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="44" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="45" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="46" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="47" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="48" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="49" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="50" AllowedInSlots="1..63"/>
+</UseableModules>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="ABS_V15" SubmoduleIdentNumber="0x00000000" Writeable_IM_Records="1 2 3 4">
+<IOData IOPS_Length="1" IOCS_Length="1"> </IOData>
+<RecordDataList/>
+<ModuleInfo>
+<Name TextId="T_ID_ABS_PRT_DAP2"/>
+<InfoText TextId="T_ID_V2_DEV_DESCRIPTION"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+<Graphics>
+<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+</Graphics>
+</DeviceAccessPointItem>
+<DeviceAccessPointItem ID="ABS_V2" PhysicalSlots="0..63" ModuleIdentNumber="0xD0000000" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="ABX-PRT" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.2" ParameterizationSpeedupSupported="true" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V2.2">
+<ModuleInfo>
+<Name TextId="T_ID_ABS_PRT_DAP2"/>
+<InfoText TextId="T_ID_V2_DEV_DESCRIPTION"/>
+<VendorName Value="HMS Industrial Networks"/>
+<OrderNumber Value="Anybus X-gateway"/>
+<HardwareRelease Value="2"/>
+<SoftwareRelease Value="V3.29"/>
+</ModuleInfo>
+<SubslotList>
+<SubslotItem SubslotNumber="32768" TextId="T_ID_SS_INTERFACE"/>
+<SubslotItem SubslotNumber="32769" TextId="T_ID_SS_PORT1"/>
+</SubslotList>
+<IOConfigData MaxInputLength="640" MaxOutputLength="640"/>
+<UseableModules>
+<ModuleItemRef ModuleItemTarget="0" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="41" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="42" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="43" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="44" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="45" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="46" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="47" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="48" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="49" AllowedInSlots="1..63"/>
+<ModuleItemRef ModuleItemTarget="50" AllowedInSlots="1..63"/>
+</UseableModules>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="ABS_V2" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+<IOData IOPS_Length="1" IOCS_Length="1"/>
+<RecordDataList/>
+<ModuleInfo>
+<Name TextId="T_ID_ABS_PRT_DAP2"/>
+<InfoText TextId="T_ID_V2_DEV_DESCRIPTION"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+<SystemDefinedSubmoduleList>
+<InterfaceSubmoduleItem ID="Interface" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" TextId="T_ID_DAP_INTERFACE_MODULE" DCP_HelloSupported="true" IsochroneModeSupported="false" SupportedMibs="" SupportedProtocols="LLDP">
+<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+<TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+</ApplicationRelations>
+</InterfaceSubmoduleItem>
+<PortSubmoduleItem ID="Port 1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUTypes="16" TextId="T_ID_PORT"/>
+</SystemDefinedSubmoduleList>
+<Graphics>
+<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+</Graphics>
+</DeviceAccessPointItem>
+</DeviceAccessPointList>
+<ModuleList>
+<!-- Input modules  -->
+<ModuleItem ID="1" ModuleIdentNumber="0x00000001">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN1"/>
+<InfoText TextId="IN1"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="1" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN1"/>
+<InfoText TextId="IN1"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="2" ModuleIdentNumber="0x00000002">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN2"/>
+<InfoText TextId="IN2"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="2" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN2"/>
+<InfoText TextId="IN2"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="3" ModuleIdentNumber="0x00000003">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN4"/>
+<InfoText TextId="IN4"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="4" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN4"/>
+<InfoText TextId="IN4"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="4" ModuleIdentNumber="0x00000004">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN8"/>
+<InfoText TextId="IN8"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="8" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN8"/>
+<InfoText TextId="IN8"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="5" ModuleIdentNumber="0x00000005">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN16"/>
+<InfoText TextId="IN16"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="16" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN16"/>
+<InfoText TextId="IN16"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="6" ModuleIdentNumber="0x00000006">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN32"/>
+<InfoText TextId="IN32"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="32" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN32"/>
+<InfoText TextId="IN32"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="7" ModuleIdentNumber="0x00000007">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN64"/>
+<InfoText TextId="IN64"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="64" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN64"/>
+<InfoText TextId="IN64"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="8" ModuleIdentNumber="0x00000008">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN128"/>
+<InfoText TextId="IN128"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="128" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN128"/>
+<InfoText TextId="IN128"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="9" ModuleIdentNumber="0x00000009">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN256"/>
+<InfoText TextId="IN256"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="256" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN256"/>
+<InfoText TextId="IN256"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="10" ModuleIdentNumber="0x0000000A">
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN512"/>
+<InfoText TextId="IN512"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="512" TextId="INPUT"/>
+</Input>
+</IOData>
+<ModuleInfo CategoryRef="IN Module">
+<Name TextId="IN512"/>
+<InfoText TextId="IN512"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<!-- Output modules -->
+<ModuleItem ID="21" ModuleIdentNumber="0x00000010">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT1"/>
+<InfoText TextId="OUT1"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="21" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="1" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT1"/>
+<InfoText TextId="OUT1"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="22" ModuleIdentNumber="0x00000020">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT2"/>
+<InfoText TextId="OUT2"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="22" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="2" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT2"/>
+<InfoText TextId="OUT2"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="23" ModuleIdentNumber="0x00000030">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT4"/>
+<InfoText TextId="OUT4"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="23" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="4" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT4"/>
+<InfoText TextId="OUT4"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="24" ModuleIdentNumber="0x00000040">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT8"/>
+<InfoText TextId="OUT8"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="24" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="8" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT8"/>
+<InfoText TextId="OUT8"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="25" ModuleIdentNumber="0x00000050">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT16"/>
+<InfoText TextId="OUT16"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="25" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="16" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT16"/>
+<InfoText TextId="OUT16"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="26" ModuleIdentNumber="0x00000060">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT32"/>
+<InfoText TextId="OUT32"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="26" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="32" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT32"/>
+<InfoText TextId="OUT32"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="27" ModuleIdentNumber="0x00000070">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT64"/>
+<InfoText TextId="OUT64"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="27" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="64" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT64"/>
+<InfoText TextId="OUT64"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="28" ModuleIdentNumber="0x00000080">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT128"/>
+<InfoText TextId="OUT128"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="28" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="128" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT128"/>
+<InfoText TextId="OUT128"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="29" ModuleIdentNumber="0x00000090">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT256"/>
+<InfoText TextId="OUT256"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="29" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="256" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT256"/>
+<InfoText TextId="OUT256"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="30" ModuleIdentNumber="0x000000A0">
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT512"/>
+<InfoText TextId="OUT512"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="30" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="512" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="OUT Module">
+<Name TextId="OUT512"/>
+<InfoText TextId="OUT512"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<!-- Bidirectional modules -->
+<ModuleItem ID="41" ModuleIdentNumber="0x00000100">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR1"/>
+<InfoText TextId="BIDIR1"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="41" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="1" TextId="INPUT"/>
+</Input>
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="1" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR1"/>
+<InfoText TextId="BIDIR1"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="42" ModuleIdentNumber="0x00000200">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR2"/>
+<InfoText TextId="BIDIR2"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="42" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="2" TextId="INPUT"/>
+</Input>
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="2" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR2"/>
+<InfoText TextId="BIDIR2"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="43" ModuleIdentNumber="0x00000300">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR4"/>
+<InfoText TextId="BIDIR4"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="43" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="4" TextId="INPUT"/>
+</Input>
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="4" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR4"/>
+<InfoText TextId="BIDIR4"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="44" ModuleIdentNumber="0x00000400">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR8"/>
+<InfoText TextId="BIDIR8"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="44" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="8" TextId="INPUT"/>
+</Input>
+<Output Consistency="Item consistency">
+<DataItem DataType="OctetString" Length="8" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR8"/>
+<InfoText TextId="BIDIR8"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="45" ModuleIdentNumber="0x00000500">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR16"/>
+<InfoText TextId="BIDIR16"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="45" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="16" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="16" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR16"/>
+<InfoText TextId="BIDIR16"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="46" ModuleIdentNumber="0x00000600">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR32"/>
+<InfoText TextId="BIDIR32"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="46" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="32" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="32" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR32"/>
+<InfoText TextId="BIDIR32"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="47" ModuleIdentNumber="0x00000700">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR64"/>
+<InfoText TextId="BIDIR64"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="47" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="64" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="64" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR64"/>
+<InfoText TextId="BIDIR64"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="48" ModuleIdentNumber="0x00000800">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR128"/>
+<InfoText TextId="BIDIR128"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="48" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="128" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="128" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR128"/>
+<InfoText TextId="BIDIR128"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="49" ModuleIdentNumber="0x00000900">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR256"/>
+<InfoText TextId="BIDIR256"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="49" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="256" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="256" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR256"/>
+<InfoText TextId="BIDIR256"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<ModuleItem ID="50" ModuleIdentNumber="0x00000A00">
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR512"/>
+<InfoText TextId="BIDIR512"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="50" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1">
+<Input Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="512" TextId="INPUT"/>
+</Input>
+<Output Consistency="All items consistency">
+<DataItem DataType="OctetString" Length="512" TextId="OUTPUT"/>
+</Output>
+</IOData>
+<ModuleInfo CategoryRef="BIDIR Module">
+<Name TextId="BIDIR512"/>
+<InfoText TextId="BIDIR512"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+<!-- Other modules  -->
+<ModuleItem ID="0" ModuleIdentNumber="0xB0000000">
+<ModuleInfo CategoryRef="Other Module">
+<Name TextId="EmptySlot"/>
+<InfoText TextId="EmptySlot"/>
+</ModuleInfo>
+<VirtualSubmoduleList>
+<VirtualSubmoduleItem ID="0" SubmoduleIdentNumber="0x00000000">
+<IOData IOPS_Length="1" IOCS_Length="1"> </IOData>
+<ModuleInfo CategoryRef="Other Module">
+<Name TextId="EmptySlot"/>
+<InfoText TextId="EmptySlot"/>
+</ModuleInfo>
+</VirtualSubmoduleItem>
+</VirtualSubmoduleList>
+</ModuleItem>
+</ModuleList>
+<GraphicsList>
+<GraphicItem ID="1" GraphicFile="GSDML-010C-0011-ABX-PRT"/>
+</GraphicsList>
+<CategoryList>
+<CategoryItem ID="IN Module" TextId="IN Module"/>
+<CategoryItem ID="OUT Module" TextId="OUT Module"/>
+<CategoryItem ID="BIDIR Module" TextId="BIDIR Module"/>
+<CategoryItem ID="Other Module" TextId="Other Module"/>
+<CategoryItem ID="CAT_REF_MIGRATION_DAP" TextId="T_ID_MIGRATION_DAP"/>
+</CategoryList>
+<ExternalTextList>
+<PrimaryLanguage>
+<!-- Identification -->
+<Text TextId="T_ID_ABS_PRT_DAP1" Value="RT Migration"/>
+<Text TextId="T_ID_ABS_PRT_DAP15" Value="RT Migration (FW>=4.02)"/>
+<Text TextId="T_ID_ABS_PRT_DAP2" Value="RT Standard"/>
+<Text TextId="T_ID_DEV_DESCRIPTION" Value="Anybus X-gateway PROFINET IO module"/>
+<Text TextId="T_ID_V1_DEV_DESCRIPTION" Value="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics."/>
+<Text TextId="T_ID_V15_DEV_DESCRIPTION" Value="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics."/>
+<Text TextId="T_ID_V2_DEV_DESCRIPTION" Value="This Device Access Point supports RT communication"/>
+<Text TextId="T_ID_SS_INTERFACE" Value="X1"/>
+<Text TextId="T_ID_SS_PORT1" Value="P1"/>
+<Text TextId="T_ID_DAP_INTERFACE_MODULE" Value="Interface"/>
+<Text TextId="T_ID_PORT" Value="RJ45 100 MBit/s"/>
+<!-- Module category -->
+<Text TextId="IN Module" Value="Input modules"/>
+<Text TextId="OUT Module" Value="Output modules"/>
+<Text TextId="BIDIR Module" Value="Input/Output modules"/>
+<Text TextId="Other Module" Value="Other modules"/>
+<Text TextId="T_ID_MIGRATION_DAP" Value="Migration"/>
+<!-- Input modules -->
+<Text TextId="IN1" Value="Input 001 byte"/>
+<Text TextId="IN2" Value="Input 002 bytes"/>
+<Text TextId="IN4" Value="Input 004 bytes"/>
+<Text TextId="IN8" Value="Input 008 bytes"/>
+<Text TextId="IN16" Value="Input 016 bytes"/>
+<Text TextId="IN32" Value="Input 032 bytes"/>
+<Text TextId="IN64" Value="Input 064 bytes"/>
+<Text TextId="IN128" Value="Input 128 bytes"/>
+<Text TextId="IN256" Value="Input 256 bytes"/>
+<Text TextId="IN512" Value="Input 512 bytes"/>
+<Text TextId="INPUT" Value="Input"/>
+<!-- Output modules -->
+<Text TextId="OUT1" Value="Output 001 byte"/>
+<Text TextId="OUT2" Value="Output 002 bytes"/>
+<Text TextId="OUT4" Value="Output 004 bytes"/>
+<Text TextId="OUT8" Value="Output 008 bytes"/>
+<Text TextId="OUT16" Value="Output 016 bytes"/>
+<Text TextId="OUT32" Value="Output 032 bytes"/>
+<Text TextId="OUT64" Value="Output 064 bytes"/>
+<Text TextId="OUT128" Value="Output 128 bytes"/>
+<Text TextId="OUT256" Value="Output 256 bytes"/>
+<Text TextId="OUT512" Value="Output 512 bytes"/>
+<Text TextId="OUTPUT" Value="Output"/>
+<!-- Bidirectional modules -->
+<Text TextId="BIDIR1" Value="Input/Output 001 byte"/>
+<Text TextId="BIDIR2" Value="Input/Output 002 bytes"/>
+<Text TextId="BIDIR4" Value="Input/Output 004 bytes"/>
+<Text TextId="BIDIR8" Value="Input/Output 008 bytes"/>
+<Text TextId="BIDIR16" Value="Input/Output 016 bytes"/>
+<Text TextId="BIDIR32" Value="Input/Output 032 bytes"/>
+<Text TextId="BIDIR64" Value="Input/Output 064 bytes"/>
+<Text TextId="BIDIR128" Value="Input/Output 128 bytes"/>
+<Text TextId="BIDIR256" Value="Input/Output 256 bytes"/>
+<Text TextId="BIDIR512" Value="Input/Output 512 bytes"/>
+<Text TextId="BIDIR" Value="Input/Output"/>
+<!-- Other modules -->
+<Text TextId="EmptySlot" Value="Empty slot"/>
+</PrimaryLanguage>
+<Language xml:lang="de">
+<!-- Identification -->
+<Text TextId="T_ID_ABS_PRT_DAP1" Value="RT Migration"/>
+<Text TextId="T_ID_ABS_PRT_DAP15" Value="RT Migration (FW>=4.02)"/>
+<Text TextId="T_ID_ABS_PRT_DAP2" Value="RT Standard"/>
+<Text TextId="T_ID_DEV_DESCRIPTION" Value="Anybus X-gateway PROFINET IO module"/>
+<Text TextId="T_ID_V1_DEV_DESCRIPTION" Value="Dieser Device Access Point kann von IO-Controllern benutzt werden, die nicht erweiterte PROFINET-Diagnosen unterstützen."/>
+<Text TextId="T_ID_V15_DEV_DESCRIPTION" Value="Dieser Device Access Point kann von IO-Controllern benutzt werden, die nicht erweiterte PROFINET-Diagnosen unterstützen."/>
+<Text TextId="T_ID_V2_DEV_DESCRIPTION" Value="Dieser Device Access Point unterstützt RT-kommunikation"/>
+<Text TextId="T_ID_SS_INTERFACE" Value="X1"/>
+<Text TextId="T_ID_SS_PORT1" Value="P1"/>
+<Text TextId="T_ID_DAP_INTERFACE_MODULE" Value="Interface"/>
+<Text TextId="T_ID_PORT" Value="RJ45 100 MBit/s"/>
+<!-- Module category -->
+<Text TextId="IN Module" Value="Eingangsmodule"/>
+<Text TextId="OUT Module" Value="Ausgangsmodule"/>
+<Text TextId="BIDIR Module" Value="Ein-/Ausgangsmodule"/>
+<Text TextId="Other Module" Value="Andere Module"/>
+<Text TextId="T_ID_MIGRATION_DAP" Value="Migration"/>
+<!-- Input modules -->
+<Text TextId="IN1" Value="Eingänge 001 byte"/>
+<Text TextId="IN2" Value="Eingänge 002 bytes"/>
+<Text TextId="IN4" Value="Eingänge 004 bytes"/>
+<Text TextId="IN8" Value="Eingänge 008 bytes"/>
+<Text TextId="IN16" Value="Eingänge 016 bytes"/>
+<Text TextId="IN32" Value="Eingänge 032 bytes"/>
+<Text TextId="IN64" Value="Eingänge 064 bytes"/>
+<Text TextId="IN128" Value="Eingänge 128 bytes"/>
+<Text TextId="IN256" Value="Eingänge 256 bytes"/>
+<Text TextId="IN512" Value="Eingänge 512 bytes"/>
+<Text TextId="INPUT" Value="Eingänge"/>
+<!-- Output modules -->
+<Text TextId="OUT1" Value="Ausgänge 001 byte"/>
+<Text TextId="OUT2" Value="Ausgänge 002 bytes"/>
+<Text TextId="OUT4" Value="Ausgänge 004 bytes"/>
+<Text TextId="OUT8" Value="Ausgänge 008 bytes"/>
+<Text TextId="OUT16" Value="Ausgänge 016 bytes"/>
+<Text TextId="OUT32" Value="Ausgänge 032 bytes"/>
+<Text TextId="OUT64" Value="Ausgänge 064 bytes"/>
+<Text TextId="OUT128" Value="Ausgänge 128 bytes"/>
+<Text TextId="OUT256" Value="Ausgänge 256 bytes"/>
+<Text TextId="OUT512" Value="Ausgänge 512 bytes"/>
+<Text TextId="OUTPUT" Value="Ausgänge"/>
+<!-- Bidirectional modules -->
+<Text TextId="BIDIR1" Value="Ein-/Ausgänge 001 byte"/>
+<Text TextId="BIDIR2" Value="Ein-/Ausgänge 002 bytes"/>
+<Text TextId="BIDIR4" Value="Ein-/Ausgänge 004 bytes"/>
+<Text TextId="BIDIR8" Value="Ein-/Ausgänge 008 bytes"/>
+<Text TextId="BIDIR16" Value="Ein-/Ausgänge 016 bytes"/>
+<Text TextId="BIDIR32" Value="Ein-/Ausgänge 032 bytes"/>
+<Text TextId="BIDIR64" Value="Ein-/Ausgänge 064 bytes"/>
+<Text TextId="BIDIR128" Value="Ein-/Ausgänge 128 bytes"/>
+<Text TextId="BIDIR256" Value="Ein-/Ausgänge 256 bytes"/>
+<Text TextId="BIDIR512" Value="Ein-/Ausgänge 512 bytes"/>
+<Text TextId="BIDIR" Value="Ein-/Ausgänge"/>
+<!-- Other modules -->
+<Text TextId="EmptySlot" Value="Leerplatz"/>
+</Language>
+</ExternalTextList>
+</ApplicationProcess>
+</ProfileBody>
+</ISO15745Profile>

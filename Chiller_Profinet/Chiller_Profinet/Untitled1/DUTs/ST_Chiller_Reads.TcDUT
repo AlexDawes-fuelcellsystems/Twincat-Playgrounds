@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Chiller_Reads" Id="{0377e7ac-448e-48c3-9036-c1f475f39ea1}">
+    <Declaration><![CDATA[{attribute 'pack_mode' := '1'}
+TYPE ST_Chiller_Reads :
+STRUCT
+	ChilleStatesIn  : ST_States;
+	ChillerValuesIn : ST_Value1;
+	ChillerAlarmsIn : ST_Alarms;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
